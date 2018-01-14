@@ -1,0 +1,41 @@
+{
+    "_id" : ObjectId("5783fed775b0bdf7090041ba"),
+    "userId" : "patrick",
+    "Title" : "ayiernuveo",
+    "Place" : "sniirqknit",
+    "Kind" : "Privat",
+    "All-Day" : true,
+    "Start" : NumberLong("1364794500000"),
+    "End" : NumberLong("1364805300000"),
+    "Repeat" : null,
+    "Available" : true,
+    "Notes" : "iinitsanqyqisireejns"
+}
+
+{
+    "userId" : "patrick",
+    "Title" : "Test",
+    "Place" : "sniirqknit",
+    "Kind" : "Privat",
+    "All-Day" : true,
+    "Start" : NumberLong("1364794500000"),
+    "End" : NumberLong("1364805300000"),
+    "Repeat" : null,
+    "Available" : true,
+    "Notes" : "iinitsanqyqisireejns"
+}
+
+db.patrick.find({"_id" : ObjectId("5783fed775b0bdf7090041ba")})
+db.patrick.update({"_id" : ObjectId("5783fed775b0bdf7090041ba")}, {
+    "userId" : "patrick",
+    "Title" : "Test",
+    "Place" : "sniirqknit",
+    "Kind" : "Privat",
+    "All-Day" : true,
+    "Start" : NumberLong("1364794500000"),
+    "End" : NumberLong("1364805300000"),
+    "Repeat" : null,
+    "Available" : true,
+    "Notes" : "iinitsanqyqisireejns"
+}
+)

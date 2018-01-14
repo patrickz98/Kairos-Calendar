@@ -1,0 +1,314 @@
+192.168.0.200
+localhost
+odroid-ubuntu.local
+
+### Master ###
+
+cluster.name: Calendar
+node.name: odroid-u3-master
+node.master: true
+node.data: true
+node.client: false
+network.host: odroid-ubuntu.local
+# network.host: _local_
+discovery.zen.ping.unicast.hosts: ["odroid-ubuntu-x2.local"]
+
+### data ###
+
+cluster.name: Calendar
+node.name: odroid-client
+node.master: false
+node.client: false
+node.data: true
+network.host: odroid-ubuntu-x2.local
+# discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["odroid-ubuntu.local"]
+
+
+nohup ./elasticsearch-2.3.3/bin/elasticsearch 1>elastic-out.log 2>elastic-err.log &
+
+curl -XPOST 'http://odroid-ubuntu-x2.local:9200/calendar/userConf/patrick123?pretty' -d '
+{
+    "categorys": {
+        "Calendar": "#51A7F9",
+        "School":   "#F39019",
+        "Privat":   "#EC5D57",
+        "Work":     "#B36AE2"
+    }
+}'
+
+curl -XGET 'http://127.0.0.1:9200/spiegel/tika/_search?pretty' -d '
+{
+    "query": {
+        "filtered": {
+            "query": {
+                "match_all": {}
+            }
+        }
+    }
+}'
+
+curl -XGET 'http://odroid-ubuntu.local:9200/calendar/test/_search?pretty' -d '{
+    "query": {
+        "filtered": {
+            "query": {
+                "match_all": {}
+            },
+            "filter": {
+                "range" : {
+                    "Start" : {
+                        "gte": "01/01/2014",
+                        "lte": "2017",
+                        "format": "dd/MM/yyyy||yyyy"
+                    }
+                }
+            }
+        }
+    }
+}'
+
+curl -XGET 'http://odroid-ubuntu-x2.local:9200/calendar/test/_search?pretty' -d '
+{
+    "query":
+    {
+        "filtered":
+        {
+            "query":
+            {
+                "match_all": {}
+            },
+            "filter":
+            {
+                "range" :
+                {
+                    "Start" :
+                    {
+                        "gte": "now-10d/d",
+                        "lt": "now+10d/d"
+                    }
+                }
+            }
+        }
+    }
+}'
+
+http://192.168.0.200:9200/_cluster/health?pretty=true
+
+curl -XGET 'http://localhost:9200/calendar/test/_search?pretty' -d '{
+    "query": {
+        "filtered": {
+            "query": {
+                "match_all": {}
+            }
+        }
+    }
+}'
+
+curl -XGET 'http://odroid-ubuntu.local:9200/calendar/test/_search?q=user-id:*&pretty'
+
+curl -XGET 'http://odroid-ubuntu.local:9200/calendar/test/_search?q=user-id:user6614&pretty'
+
+curl -XGET 'http://192.168.0.53:9200/calendar/test/_count?pretty' -d '
+{
+    "query": {
+        "filtered": {
+            "query": {
+                "match_all": {}
+            }
+        }
+    }
+}'
+
+curl -XPUT 'http://localhost:9200/calendar/?pretty' -d '
+{
+  "mappings": {
+    "test": {
+      "properties": {
+        "Start": {
+          "type":   "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        },
+        "End": {
+          "type":   "date",
+          "format": "strict_date_optional_time||epoch_millis"
+        }
+      }
+    }
+  },
+  "settings": {
+    "number_of_shards":   5,
+    "number_of_replicas": 0
+  }
+}'
+
+curl -XPUT 'http://odroid-ubuntu.local:9200/calendar/_settings?pretty' -d '
+{
+    "index" : {
+        "number_of_replicas" : 0
+    }
+}'
+
+curl -XPUT 'http://odroid-ubuntu.local:9200/calendar/?pretty' -d '
+{
+    "settings": {
+      "number_of_shards":   10,
+      "number_of_replicas": 0
+    }
+}'
+
+curl -XGET 'http://odroid-ubuntu.local:9200/calendar/test/_search?pretty' -d '{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "user-id": "user16566"
+          }
+        },
+        {
+          "range": {
+            "Start": {
+              "gte": "01.06.2016",
+              "lte": "01.07.2016",
+              "format": "dd.MM.yyyy"
+            }
+          }
+        }
+      ],
+      "must_not": [],
+      "should": []
+    }
+  },
+  "from": 0,
+  "size": 10,
+  "sort": [],
+  "aggs": {}
+}'
+
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "term": {
+          "user-id": "patrick123"
+        }
+      },
+      "filter": {
+        "or": [
+          {
+            "range": {
+              "Start": {
+              "gte": "01.07.2016",
+              "lte": "01.08.2016",
+              "format": "dd.MM.yyyy"
+              }
+            }
+          },
+          {
+            "range": {
+              "End": {
+                  "gte": "01.07.2016",
+                  "lte": "01.08.2016",
+                  "format": "dd.MM.yyyy"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+{
+  "from": 0,
+  "size": 1000,
+  "query": {
+    "filtered": {
+      "query": {
+        "term": {
+          "user-id": "pups"
+        }
+      },
+      "filter": {
+        "and": [
+          {
+            "range": {
+              "Start": {
+                "lte": "01.07.2016",
+                "format": "dd.MM.yyyy"
+              }
+            }
+          },
+          {
+            "range": {
+              "End": {
+                "gte": "01.08.2016",
+                "format": "dd.MM.yyyy"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "term": {
+          "user-id": "patrick123"
+        }
+      },
+      "filter": {
+        "or": [
+          {
+            "or": [
+              {
+                "range": {
+                  "Start": {
+                    "gte": "01.07.2016",
+                    "lte": "01.08.2016",
+                    "format": "dd.MM.yyyy"
+                  }
+                }
+              },
+              {
+                "range": {
+                  "End": {
+                    "gte": "01.07.2016",
+                    "lte": "01.08.2016",
+                    "format": "dd.MM.yyyy"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "and": [
+              {
+                "range": {
+                  "Start": {
+                    "lte": "01.07.2016",
+                    "format": "dd.MM.yyyy"
+                  }
+                }
+              },
+              {
+                "range": {
+                  "End": {
+                    "gte": "01.08.2016",
+                    "format": "dd.MM.yyyy"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

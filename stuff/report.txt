@@ -1,0 +1,21 @@
+PLEASE READ:
+
+This form is only for reporting bugs found in the Android system while
+developing Android applications. Use the Tools templates for issues with
+the developer tools.
+
+Please describe the problem in detail. Be sure to include:
+- Steps to reproduce the problem (including sample code if appropriate).
+- What happened.
+- What you think the correct behavior should be.
+
+Don't forget to mention which version of Android you're using, and/or which
+device the problem appears on (model and Android version).
+
+Please also run "adb bugreport" and archive the output.
+
+MJ7xK7WE7pf4
+
+https://code.google.com/p/android/issues/detail?id=222702
+
+https://bugs.chromium.org/p/chromium/issues/detail?id=648090&q=&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified

@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD276AF21D856469008BA9D9 /* app.js in Resources */ = {isa = PBXBuildFile; fileRef = CD276AF11D856469008BA9D9 /* app.js */; };
+		CD361EB21DC01F900045FA60 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD361EB11DC01F900045FA60 /* QrViewController.swift */; };
+		CDAB8C461D3FF0AE00C899A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAB8C451D3FF0AE00C899A3 /* Assets.xcassets */; };
+		CDB0B18C1DBAC2EA004143BD /* WebAppInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB0B18B1DBAC2EA004143BD /* WebAppInterface.swift */; };
+		CDBCEC711D1C837F00B6C3E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCEC701D1C837F00B6C3E3 /* AppDelegate.swift */; };
+		CDBCEC731D1C837F00B6C3E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBCEC721D1C837F00B6C3E3 /* ViewController.swift */; };
+		CDBCEC761D1C837F00B6C3E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBCEC741D1C837F00B6C3E3 /* Main.storyboard */; };
+		CDBCEC791D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDBCEC771D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodeld */; };
+		CDBCEC7E1D1C837F00B6C3E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBCEC7C1D1C837F00B6C3E3 /* LaunchScreen.storyboard */; };
+		CDD1F4891D8574D300FE414D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1F4881D8574D300FE414D /* DataManager.swift */; };
+		CDD7C5BD1DBCC7E200DD4FB7 /* QrCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7C5BC1DBCC7E200DD4FB7 /* QrCodeScanner.swift */; };
+		CDD7C5BF1DBCF56300DD4FB7 /* Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7C5BE1DBCF56300DD4FB7 /* Simple.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD276AF11D856469008BA9D9 /* app.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = app.js; sourceTree = "<group>"; };
+		CD361EB11DC01F900045FA60 /* QrViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
+		CDAB8C451D3FF0AE00C899A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDB0B18B1DBAC2EA004143BD /* WebAppInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAppInterface.swift; sourceTree = "<group>"; };
+		CDBCEC6D1D1C837E00B6C3E3 /* Kairos-Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kairos-Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBCEC701D1C837F00B6C3E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDBCEC721D1C837F00B6C3E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDBCEC751D1C837F00B6C3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDBCEC781D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dragon_Calendar.xcdatamodel; sourceTree = "<group>"; };
+		CDBCEC7D1D1C837F00B6C3E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDBCEC7F1D1C837F00B6C3E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD1F4881D8574D300FE414D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CDD7C5BC1DBCC7E200DD4FB7 /* QrCodeScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QrCodeScanner.swift; sourceTree = "<group>"; };
+		CDD7C5BE1DBCF56300DD4FB7 /* Simple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simple.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDBCEC6A1D1C837E00B6C3E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDBCEC641D1C837E00B6C3E3 = {
+			isa = PBXGroup;
+			children = (
+				CDBCEC6F1D1C837F00B6C3E3 /* Kairos-Calendar */,
+				CDBCEC6E1D1C837E00B6C3E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDBCEC6E1D1C837E00B6C3E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDBCEC6D1D1C837E00B6C3E3 /* Kairos-Calendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDBCEC6F1D1C837F00B6C3E3 /* Kairos-Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				CDAB8C451D3FF0AE00C899A3 /* Assets.xcassets */,
+				CDBCEC701D1C837F00B6C3E3 /* AppDelegate.swift */,
+				CDBCEC721D1C837F00B6C3E3 /* ViewController.swift */,
+				CDD1F4881D8574D300FE414D /* DataManager.swift */,
+				CDB0B18B1DBAC2EA004143BD /* WebAppInterface.swift */,
+				CDD7C5BE1DBCF56300DD4FB7 /* Simple.swift */,
+				CD276AF11D856469008BA9D9 /* app.js */,
+				CDBCEC741D1C837F00B6C3E3 /* Main.storyboard */,
+				CDBCEC7C1D1C837F00B6C3E3 /* LaunchScreen.storyboard */,
+				CDBCEC7F1D1C837F00B6C3E3 /* Info.plist */,
+				CDBCEC771D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodeld */,
+				CDD7C5BC1DBCC7E200DD4FB7 /* QrCodeScanner.swift */,
+				CD361EB11DC01F900045FA60 /* QrViewController.swift */,
+			);
+			name = "Kairos-Calendar";
+			path = "Dragon-Calendar";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDBCEC6C1D1C837E00B6C3E3 /* Kairos-Calendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDBCEC821D1C837F00B6C3E3 /* Build configuration list for PBXNativeTarget "Kairos-Calendar" */;
+			buildPhases = (
+				CDBCEC691D1C837E00B6C3E3 /* Sources */,
+				CDBCEC6A1D1C837E00B6C3E3 /* Frameworks */,
+				CDBCEC6B1D1C837E00B6C3E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kairos-Calendar";
+			productName = "Dragon-Calendar";
+			productReference = CDBCEC6D1D1C837E00B6C3E3 /* Kairos-Calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDBCEC651D1C837E00B6C3E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "patrick zierahn";
+				TargetAttributes = {
+					CDBCEC6C1D1C837E00B6C3E3 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = M69Q9QQB69;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CDBCEC681D1C837E00B6C3E3 /* Build configuration list for PBXProject "Kairos-Calendar" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDBCEC641D1C837E00B6C3E3;
+			productRefGroup = CDBCEC6E1D1C837E00B6C3E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDBCEC6C1D1C837E00B6C3E3 /* Kairos-Calendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDBCEC6B1D1C837E00B6C3E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDBCEC7E1D1C837F00B6C3E3 /* LaunchScreen.storyboard in Resources */,
+				CD276AF21D856469008BA9D9 /* app.js in Resources */,
+				CDAB8C461D3FF0AE00C899A3 /* Assets.xcassets in Resources */,
+				CDBCEC761D1C837F00B6C3E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDBCEC691D1C837E00B6C3E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB0B18C1DBAC2EA004143BD /* WebAppInterface.swift in Sources */,
+				CDD7C5BF1DBCF56300DD4FB7 /* Simple.swift in Sources */,
+				CDD7C5BD1DBCC7E200DD4FB7 /* QrCodeScanner.swift in Sources */,
+				CDBCEC731D1C837F00B6C3E3 /* ViewController.swift in Sources */,
+				CDBCEC711D1C837F00B6C3E3 /* AppDelegate.swift in Sources */,
+				CDBCEC791D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodeld in Sources */,
+				CD361EB21DC01F900045FA60 /* QrViewController.swift in Sources */,
+				CDD1F4891D8574D300FE414D /* DataManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDBCEC741D1C837F00B6C3E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDBCEC751D1C837F00B6C3E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDBCEC7C1D1C837F00B6C3E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDBCEC7D1D1C837F00B6C3E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDBCEC801D1C837F00B6C3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDBCEC811D1C837F00B6C3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDBCEC831D1C837F00B6C3E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M69Q9QQB69;
+				INFOPLIST_FILE = "Dragon-Calendar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos-calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDBCEC841D1C837F00B6C3E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M69Q9QQB69;
+				INFOPLIST_FILE = "Dragon-Calendar/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kairos-calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDBCEC681D1C837E00B6C3E3 /* Build configuration list for PBXProject "Kairos-Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDBCEC801D1C837F00B6C3E3 /* Debug */,
+				CDBCEC811D1C837F00B6C3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDBCEC821D1C837F00B6C3E3 /* Build configuration list for PBXNativeTarget "Kairos-Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDBCEC831D1C837F00B6C3E3 /* Debug */,
+				CDBCEC841D1C837F00B6C3E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDBCEC771D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDBCEC781D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodel */,
+			);
+			currentVersion = CDBCEC781D1C837F00B6C3E3 /* Dragon_Calendar.xcdatamodel */;
+			path = Dragon_Calendar.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDBCEC651D1C837E00B6C3E3 /* Project object */;
+}

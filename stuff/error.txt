@@ -1,0 +1,32 @@
+09-16 23:39:42.593 25291-25291/net.ddns.patrickz.dragon_calendar W/ResourceType: No known package when getting value for resource number 0x020a0069
+09-16 23:39:42.593 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err: android.content.res.Resources$NotFoundException: String resource ID #0x20a0069
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at android.content.res.Resources.getText(Resources.java:331)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at android.content.Context.getText(Context.java:463)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.ui.picker.DateTimePickerDialog.<init>(DateTimePickerDialog.java:78)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.ui.picker.InputDialogContainer.showPickerDialog(InputDialogContainer.java:221)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.ui.picker.InputDialogContainer.showPickerDialog(InputDialogContainer.java:102)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.ui.picker.InputDialogContainer.showDialog(InputDialogContainer.java:188)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.content.browser.input.DateTimeChooserAndroid.showDialog(DateTimeChooserAndroid.java:46)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.content.browser.input.DateTimeChooserAndroid.createDateTimeChooser(DateTimeChooserAndroid.java:60)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.base.SystemMessageHandler.nativeDoRunLoopOnce(Native Method)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at org.chromium.base.SystemMessageHandler.handleMessage(SystemMessageHandler.java:39)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at android.os.Handler.dispatchMessage(Handler.java:102)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at android.os.Looper.loop(Looper.java:154)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at android.app.ActivityThread.main(ActivityThread.java:6077)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at java.lang.reflect.Method.invoke(Native Method)
+09-16 23:39:42.596 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:865)
+09-16 23:39:42.597 25291-25291/net.ddns.patrickz.dragon_calendar W/System.err:     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:755)
+09-16 23:39:42.598 25291-25291/net.ddns.patrickz.dragon_calendar A/chromium: [FATAL:jni_android.cc(236)] Please include Java exception stack in crash report
+                                                                             
+                                                                             
+                                                                             --------- beginning of crash
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar W/google-breakpad: ### ### ### ### ### ### ### ### ### ### ### ### ###
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar W/google-breakpad: Chrome build fingerprint:
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar W/google-breakpad: 1.0
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar W/google-breakpad: 1
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar W/google-breakpad: ### ### ### ### ### ### ### ### ### ### ### ### ###
+09-16 23:39:42.771 25291-25291/net.ddns.patrickz.dragon_calendar A/libc: Fatal signal 6 (SIGABRT), code -6 in tid 25291 (dragon_calendar)
+                                                                         
+                                                                         [ 09-16 23:39:42.775   362:  362 W/         ]
+                                                                         debuggerd: handling request: pid=25291 uid=10155 gid=10155 tid=25291
+
