@@ -18,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -47,6 +48,8 @@ public class MainActivity extends Activity
     public void onCreate(Bundle state)
     {
         super.onCreate(state);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         checkPermisson();
 
