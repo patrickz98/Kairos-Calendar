@@ -13,16 +13,18 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.RelativeLayout;
+
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -42,7 +44,7 @@ public class MainActivity extends Activity
     private DataManager dataManager;
     private Handler mHandler;
 
-    private QrCodeScaner qrScanner;
+    private QrCodeScanner qrScanner;
     private String intentString = "";
 
     private RelativeLayout layout;
@@ -60,13 +62,15 @@ public class MainActivity extends Activity
     {
         super.onCreate(state);
 
-        checkPermisson();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        checkPermission();
 
         Log.d(LOGTAG, "onCreate()");
 
         dataManager = new DataManager(this);
         mHandler    = new Handler();
-        qrScanner   = new QrCodeScaner(this);
+        qrScanner   = new QrCodeScanner(this);
 
         Intent intent = getIntent();
         String data = intent.getDataString();
@@ -287,9 +291,9 @@ public class MainActivity extends Activity
         this.startActivity(intent);
     }
 
-    private void checkPermisson()
+    private void checkPermission()
     {
-        Log.d(LOGTAG, "checkPermisson");
+        Log.d(LOGTAG, "checkPermission");
 
         int compat = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
 
@@ -309,9 +313,9 @@ public class MainActivity extends Activity
         }
 
         ActivityCompat.requestPermissions(
-            this,
-            new String[]{Manifest.permission.CAMERA},
-            MY_PERMISSIONS_REQUEST_CAMERA);
+                this,
+                new String[]{Manifest.permission.CAMERA},
+                MY_PERMISSIONS_REQUEST_CAMERA);
     }
 
     @Override
